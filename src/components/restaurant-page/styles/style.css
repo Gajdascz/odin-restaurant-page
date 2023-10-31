@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'roboto-mono';
+  src: url('../fonts/robotomono-variablefont_wght-webfont.woff2'),
+       url('../fonts/robotomono-variablefont_wght-webfont.woff');
+}
+
+:root {
+  /* Background Colors */
+  background-color: #282C34;
+  /* Primary Colors */
+  --electric-blue:  #0057ff;
+  --binary-green:   #0ACF83;
+  /* Secondary Colors */
+  --warm-gray:      #ABB2BF;
+  --soft-yellow:    #F9D342;
+  /* Accent Colors */
+  --deep-charcoal: #2C3E50;
+  --crisp-white: #FFFFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'roboto-mono';
+}
+
+
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.hero-overlay {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 30px 30px 30px;
+  background-color: rgba(0, 0, 0, .9);
+  color: var(--electric-blue);
+  border-radius: 10px;
+}
+.hero-overlay > h2 {
+  font-weight: 1000;
+}
+.hero-overlay > p {
+  margin-top: 5px;
+}
+.hero-overlay > button {
+  margin-top: 10px;
+  padding: 5px;
+}
