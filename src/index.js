@@ -1,2 +1,2 @@
-import './components/restaurant-page/styles/mynormalize.css';
-import './components/restaurant-page/styles/style.css';
+import './components/restaurant-components/styles/mynormalize.css';
+import './components/restaurant-components/styles/style.css';

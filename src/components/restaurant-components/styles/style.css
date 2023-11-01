@@ -1,0 +1,401 @@
+/* Root and Defaults*/
+/*#region*/
+@font-face {
+  font-family: 'roboto-mono';
+  src: url('../fonts/robotomono-variablefont_wght-webfont.woff2'),
+       url('../fonts/robotomono-variablefont_wght-webfont.woff');
+}
+:root {
+  /* Background Colors */
+  --crt-gray: #282828;
+  --crt-gray-compliment: #1a1a1a;
+  /* Primary Colors */
+  --electric-blue:  #C2D5FF;
+  --binary-green:   #33FF00;
+  /* Secondary Colors */
+  --warm-gray:      #ABB2BF;
+  --soft-yellow:    #F9D342;
+  /* Accent Colors */
+  --deep-charcoal: #2C3E50;
+  --crisp-white: #FFFFFFFF;
+
+  --margin-shadow: 0px 0px 25px 2.5px var(--electric-blue);
+  --card-shadow: 0px 0px 5px 1px var(--electric-blue);
+
+  cursor: default;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'roboto-mono';
+}
+button {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+/*#endregion*/
+
+/* Body */
+/*#region*/
+body#body-container {
+  margin: 1rem 2rem 1rem 2rem;
+  background: black;
+  box-shadow: var(--margin-shadow);
+}
+/*#endregion*/
+
+/* Main */
+/*#region*/
+main#main-container,
+header#header-container,
+footer#footer-container {
+  background-color: var(--crt-gray);
+  border-left: 1.5px solid var(--electric-blue);
+  border-right: 1.5px solid var(--electric-blue);
+}
+/*#endregion*/
+
+/* Header and Nav */
+/*#region*/
+header#header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--binary-green);
+  border-top: 1.5px solid var(--electric-blue);
+  padding: 10px;
+  background-color: var(--crt-gray-compliment);
+  border-bottom: 1.5px solid var(--electric-blue);
+}
+.header-logo {
+  font-weight: 1000;
+  font-size: 3rem;
+}
+.header-slogan {
+  color: var(--electric-blue);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'atkinson-hyper-legible';
+  border-bottom: 0.5px solid var(--binary-green);
+}
+.header-highlight {
+  color: var(--binary-green);
+}
+nav.header-nav > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:25px;
+  margin-top: 35px;
+}
+nav.header-nav > ul > li > button {
+width: 150px;
+height: 40px;
+font-size: 1.3rem;
+color: var(--electric-blue);
+background-color: var(--crt-gray);
+border: 1.5px solid var(--binary-green);
+border-radius: 5px;
+font-weight: bold;
+}
+nav.header-nav > ul > li > button:hover {
+  color: var(--binary-green);
+  border-color: var(--electric-blue);
+  box-shadow: 0px 0px 5px var(--electric-blue);
+  font-weight: bolder;
+  }
+/*#endregion*/
+
+/* Index HERO */
+/*#region*/
+section#hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.hero-image {
+  width: 75vw;
+  max-height: 75vh;
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+.hero-overlay {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #000000f2;
+  
+  color: var(--electric-blue);
+  border: 3px solid var(--binary-green);
+  border-radius: 10px;
+}
+.hero-overlay > h2 {
+  font-weight: 1000;
+}
+.hero-overlay > p {
+  margin-top: 5px;
+}
+.hero-overlay > button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--crt-gray-compliment);
+  color: var(--electric-blue);
+  border: 2px solid var(--binary-green);
+  border-radius: 3px;
+
+}
+.hero-overlay > button:hover {
+  color: var(--binary-green);
+  border-color: var(--electric-blue);
+  box-shadow: 0px 0px 5px 1px var(--electric-blue);
+  font-weight: bold;
+}
+/*#endregion*/
+
+/* Reviews */
+/*#region*/
+section#reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+  padding-top: 50px;
+}
+
+.critic-review {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  background-color: var(--crt-gray-compliment);
+  color: var(--electric-blue);
+  border-radius: 25px;
+  box-shadow: var(--card-shadow);
+  max-width: 750px;
+  font-style: italic;
+}
+.critic-review div.critic-signature {
+  display: flex;
+  flex-direction: row-reverse;
+  color: var(--binary-green);
+  align-items: center;
+  justify-items: flex-end;
+  gap: 5px;
+}
+.critic-icon {
+  width: 25px;
+  align-self: center;
+  justify-self: center;
+  fill: black;
+  background-color: var(--electric-blue);
+  padding: 2.5px;
+  border-radius: 100%;
+}
+.total-reviews {
+  color: var(--electric-blue);
+}
+.total-reviews .star-icons-container {
+  display: flex;
+  justify-content: center;
+}
+.star-icon {
+  fill: var(--binary-green);
+  max-width: 75px;
+}
+.total-reviews-count {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: -2px;
+}
+.total-reviews-text {
+  text-align: center;
+}
+.total-reviews-sidenote { 
+  font-size: .75rem;
+  font-style: italic;
+}
+.customer-reviews-container {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  gap: 50px;
+}
+.customer-review {
+  flex-wrap: wrap;
+  max-width: 500px;
+  background-color: var(--crt-gray-compliment);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+.customer-name-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.incognito-icon-swap {
+  position: absolute;
+  width: 50px;
+  fill: black;
+  background-color: var(--electric-blue);
+  border-radius: 100%;
+  padding: 2px;
+}
+.incognito-icon-swap:hover {
+  opacity: 0;
+}
+.alien-icon {
+  width: 50px;
+  fill: var(--binary-green);
+  background-color: purple;
+  border-radius: 100%;
+  padding: 2px;
+}
+.customer-name-icon > h4 {
+  color: var(--binary-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 17px;
+}
+.customer-review > p {
+  color: var(--electric-blue);
+  font-style: italic;
+  padding-top: 2.5px;
+}
+.featured-in {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featured-in-title {
+  color: var(--binary-green);
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: -25px;
+}
+.featured-in-logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/*#endregion*/
+
+/* Newsletter */
+/*#region*/
+section.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 50px;
+  background-color: var(--crt-gray-compliment);
+}
+form#newsletter-signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+section.newsletter-container > h2 {
+  color: var(--binary-green);
+  font-weight: bold;
+  font-size: 2rem;
+}
+section.newsletter-container > h4 {
+  color: var(--electric-blue);
+  font-style: italic;
+}
+input#newsletter-email {
+  min-width: 300px;
+  min-height: 30px;
+  border: 2px solid var(--electric-blue);
+  padding: 10px;
+  font-weight: bolder;
+}
+input#newsletter-email:focus {
+  box-shadow: var(--card-shadow);
+}
+div.newsletter-options-container {
+  color: var(--electric-blue);
+  display: flex;
+}
+input#newsletter-option-tech:checked + label[for="newsletter-option-tech"] {
+  color:var(--binary-green);
+}
+label[for="newsletter-option-tech"] {
+  padding-right: 25px;
+  padding-left: 5px;
+}
+input#newsletter-option-restaurant:checked + label[for="newsletter-option-restaurant"] {
+  color:var(--binary-green);
+}
+label[for="newsletter-option-restaurant"] {
+  padding-left: 5px;
+}
+button#newsletter-submit {
+  width: 200px;
+  height: 50px;
+  font-size: 1.3rem;
+  color: var(--electric-blue);
+  background-color: var(--crt-gray);
+  border: 1.5px solid var(--binary-green);
+  border-radius: 5px;
+  font-weight: bold;
+}
+button#newsletter-submit:hover {
+  color: var(--binary-green);
+  border-color: var(--electric-blue);
+  box-shadow: 0px 0px 5px 1px var(--electric-blue);
+  font-weight: bolder;
+}
+/*#endregion*/
+
+
+/* Details */
+/*#region*/
+/*#endregion*/
+
+/* Footer */
+/*#region*/
+footer#footer-container {
+  border-bottom: 1.5px solid var(--electric-blue);
+  border-top: 1.5px solid var(--electric-blue);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--crt-gray-compliment);
+  color: var(--electric-blue);
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 20px;
+}
+.github-logo-link {
+  width: 60px;
+  fill: var(--binary-green);
+}
+.github-logo-link:hover {
+  fill: var(--electric-blue);
+  border-radius: 100%;
+  box-shadow: var(--card-shadow);
+}
+/*#endregion*/
