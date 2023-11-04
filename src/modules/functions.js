@@ -1,5 +1,5 @@
-function buildElementTree({type, attributes={}, text=null, children=null}) {
-  let element = document.createElement(type);
+function buildElementTree({type, attributes={}, text=null, children=null, nameSpace=null}) {
+  let element = nameSpace === null ? document.createElement(type) : document.createElementNS(nameSpace, type);
   for(const [key, value] of Object.entries(attributes)) {
     element.setAttribute(key,value);
   }

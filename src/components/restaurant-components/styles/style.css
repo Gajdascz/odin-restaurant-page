@@ -13,12 +13,8 @@
   --electric-blue:  #C2D5FF;
   --binary-green:   #33FF00;
   /* Secondary Colors */
-  --warm-gray:      #ABB2BF;
   --soft-yellow:    #F9D342;
-  /* Accent Colors */
-  --deep-charcoal: #2C3E50;
-  --crisp-white: #FFFFFFFF;
-
+  /* Shadows */
   --margin-shadow: 0px 0px 25px 2.5px var(--electric-blue);
   --card-shadow: 0px 0px 5px 1px var(--electric-blue);
 
@@ -26,6 +22,7 @@
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'roboto-mono';
+  color: var(--binary-green);
 }
 button {
   cursor: pointer;
@@ -46,16 +43,11 @@ body#body-container {
   background: black;
   box-shadow: var(--margin-shadow);
 }
-/*#endregion*/
-
-/* Main */
-/*#region*/
-main#main-container,
-header#header-container,
-footer#footer-container {
+main {
   background-color: var(--crt-gray);
   border-left: 1.5px solid var(--electric-blue);
   border-right: 1.5px solid var(--electric-blue);
+  color: var(--electric-blue);
 }
 /*#endregion*/
 
@@ -66,10 +58,9 @@ header#header-container {
   flex-direction: column;
   align-items: center;
   color: var(--binary-green);
-  border-top: 1.5px solid var(--electric-blue);
+  border: 1.5px solid var(--electric-blue);
   padding: 10px;
   background-color: var(--crt-gray-compliment);
-  border-bottom: 1.5px solid var(--electric-blue);
 }
 .header-logo {
   font-weight: 1000;
@@ -108,9 +99,18 @@ nav.header-nav > ul > li > button:hover {
   box-shadow: 0px 0px 5px var(--electric-blue);
   font-weight: bolder;
   }
+#current-page {
+  color: var(--binary-green);
+  border-color: var(--binary-green);
+  box-shadow: 0px 0px 6px var(--binary-green);
+  font-weight: bolder;
+}
 /*#endregion*/
 
-/* Index HERO */
+/* INDEX PAGE*/
+/*#region*/
+
+/* HERO */
 /*#region*/
 section#hero-container {
   display: flex;
@@ -166,7 +166,7 @@ section#hero-container {
 
 /* Reviews */
 /*#region*/
-section#reviews-container {
+div#reviews-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,7 +175,7 @@ section#reviews-container {
   padding-top: 50px;
 }
 
-.critic-review {
+section#critic-review {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -184,25 +184,33 @@ section#reviews-container {
   color: var(--electric-blue);
   border-radius: 25px;
   box-shadow: var(--card-shadow);
-  max-width: 750px;
+  max-width: 600px;
   font-style: italic;
 }
-.critic-review div.critic-signature {
+section#critic-review div.critic-signature {
   display: flex;
   flex-direction: row-reverse;
   color: var(--binary-green);
   align-items: center;
   justify-items: flex-end;
   gap: 5px;
+  font-size: 1.2rem;
 }
 .critic-icon {
-  width: 25px;
+  width: 35px;
   align-self: center;
   justify-self: center;
   fill: black;
   background-color: var(--electric-blue);
   padding: 2.5px;
   border-radius: 100%;
+}
+
+section#total-and-customer-review {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  gap: 50px;
 }
 .total-reviews {
   color: var(--electric-blue);
@@ -224,17 +232,19 @@ section#reviews-container {
 .total-reviews-text {
   text-align: center;
 }
-.total-reviews-sidenote { 
-  font-size: .75rem;
+.total-reviews-side-note {
   font-style: italic;
+  font-size: .8rem;
 }
-.customer-reviews-container {
+.five-star-reviews {
+  font-size: 1.1rem;
+  color: var(--binary-green);
+}
+.customer-review-container {
   display: flex;
-  flex-direction: row;
-  padding: 25px;
-  gap: 50px;
-}
-.customer-review {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 500px;
   background-color: var(--crt-gray-compliment);
@@ -242,7 +252,7 @@ section#reviews-container {
   border-radius: 10px;
   box-shadow: var(--card-shadow);
 }
-.customer-name-icon {
+.customer-icon {
   display: flex;
   align-items: center;
   position: relative;
@@ -265,13 +275,13 @@ section#reviews-container {
   border-radius: 100%;
   padding: 2px;
 }
-.customer-name-icon > h4 {
+.customer-name {
   color: var(--binary-green);
   font-weight: bold;
   font-size: 1.2rem;
   padding-left: 17px;
 }
-.customer-review > p {
+.customer-review {
   color: var(--electric-blue);
   font-style: italic;
   padding-top: 2.5px;
@@ -290,6 +300,7 @@ section#reviews-container {
   font-size: 2rem;
   font-weight: bolder;
   margin-bottom: -25px;
+  text-align: center;
 }
 .featured-in-logo-container {
   display: flex;
@@ -301,13 +312,15 @@ section#reviews-container {
 
 /* Newsletter */
 /*#region*/
-section.newsletter-container {
+section#newsletter-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   padding: 50px;
   background-color: var(--crt-gray-compliment);
+  border-left: 1.5px solid var(--electric-blue);
+  border-right: 1.5px solid var(--electric-blue);
 }
 form#newsletter-signup-form {
   display: flex;
@@ -315,12 +328,12 @@ form#newsletter-signup-form {
   align-items: center;
   gap: 12px;
 }
-section.newsletter-container > h2 {
+section#newsletter-container > h2 {
   color: var(--binary-green);
   font-weight: bold;
   font-size: 2rem;
 }
-section.newsletter-container > h4 {
+section#newsletter-container > h4 {
   color: var(--electric-blue);
   font-style: italic;
 }
@@ -370,15 +383,112 @@ button#newsletter-submit:hover {
 /*#endregion*/
 
 
-/* Details */
+/*#endregion*/
+
+
+/* MENU PAGE */
 /*#region*/
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: light;
+}
+#menu-container > h1 {
+  color: white;
+  padding-top: 15px;
+  padding-left: 25px;
+}
+#menu-container > section {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+span.const {
+  color: var(--electric-blue);
+}
+span.var {
+  color: var(--soft-yellow);
+}
+.menu-section-header {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 15px;
+  font-weight: bolder;
+}
+.menu-section-closer {
+  padding-top: 15px;
+  font-size: 2rem;
+}
+.dish-title {
+  color: var(--soft-yellow);
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+div.dishes-items {
+  padding-left: 50px;
+}
+section.desserts,
+section.appetizers {
+  background-color: var(--crt-gray-compliment);
+  padding: 25px;
+}
+ul.beverage-list,
+div.desserts-container,
+div.entrees-container,
+div.appetizers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.bit-sliders-container > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: var(--binary-green);
+}
+.bit-sliders-container > ul > li {
+  max-width: 200px;
+}
+.burger-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.burger-list > li {
+  max-width: 250px;
+}
+.sides-container {
+  display: flex;
+  flex-direction: column;
+}
+.menu-green-highlight {
+  color: var(--binary-green);
+  font-weight: 600;
+}
+.menu-yellow-highlight {
+  color: var(--soft-yellow);
+}
+.dishes-close {
+  padding-bottom: 50px;
+}
+.sides-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px
+}
+.sides-list > li {
+  max-width: 250px;
+}
 /*#endregion*/
 
 /* Footer */
 /*#region*/
 footer#footer-container {
-  border-bottom: 1.5px solid var(--electric-blue);
-  border-top: 1.5px solid var(--electric-blue);
+  border: 1.5px solid var(--electric-blue);
   display: flex;
   gap: 15px;
   justify-content: center;
