@@ -44,22 +44,22 @@ const menu = (() => {
           {
             type: 'li',
             children: [
-              { type: 'span', text: `Potato: `, attributes: { class: 'menu-green-highlight' } },
-              { type: 'div', text: `(fries/mashed/baked)`, attributes: { class: 'menu-yellow-highlight' } },
+              { type: 'span', text: `Potato: `, attributes: { class: 'highlight-green' } },
+              { type: 'div', text: `(fries/mashed/baked)`, attributes: { class: 'highlight-yellow' } },
               { type: 'span', text: 'Regular, Sweet Potato, Garlic-Parm' }
             ]
           },
           {
             type: 'li',
             children: [
-              { type: 'span', text: `Salad: `, attributes: { class: 'menu-green-highlight' } },
+              { type: 'span', text: `Salad: `, attributes: { class: 'highlight-green' } },
               { type: 'div', text: 'Caesar, Garden, Kitchen Special' }
             ]
           },
           {
             type: 'li',
             children: [
-              { type: 'span', text: `Vegetable: `, attributes: { class: 'menu-green-highlight' } },
+              { type: 'span', text: `Vegetable: `, attributes: { class: 'highlight-green' } },
               { type: 'div', text: 'Broccoli, Asparagus, Corn, Squash, Carrot' }
             ]
           }
@@ -80,21 +80,21 @@ const menu = (() => {
           {
             type: 'li',
             children: [
-              { type: 'span', text: `Cheese: `, attributes: { class: 'menu-green-highlight' } },
+              { type: 'span', text: `Cheese: `, attributes: { class: 'highlight-green' } },
               { type: 'span', text: 'C-Sharp Cheddar, Git Gouda, Python Pepper-Jack' }
             ]
           },
           {
             type: 'li',
             children: [
-              { type: 'span', text: `Vegetables: `, attributes: { class: 'menu-green-highlight' } },
+              { type: 'span', text: `Vegetables: `, attributes: { class: 'highlight-green' } },
               { type: 'span', text: 'Lettuce, Tomato, Onion' }
             ]
           },
           {
             type: 'li',
             children: [
-              { type: 'span', text: `Sauce: `, attributes: { class: 'menu-green-highlight' } },
+              { type: 'span', text: `Sauce: `, attributes: { class: 'highlight-green' } },
               { type: 'span', text: 'Ketchup, Mustard, House BBQ' }
             ]
           }
@@ -124,7 +124,7 @@ const menu = (() => {
     null,
     {type: 'ul', attributes: {class: 'beverage-list'},
      children: [
-      {type: 'li', text: 'Ask your server about our menus for artisan and alcoholic beverages', attributes: {class: 'menu-yellow-highlight'}},
+      {type: 'li', text: 'Ask your server about our menus for artisan and alcoholic beverages', attributes: {class: 'highlight-yellow'}},
       {type: 'li', text: 'Sparkling/Plain Spring Water'},
       {type: 'li', text: 'Pepsi Products'}
       ]})

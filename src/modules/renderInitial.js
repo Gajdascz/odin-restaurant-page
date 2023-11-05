@@ -37,9 +37,9 @@ function createSlogan() {
     type: `h4`, attributes: { class: `header-slogan` },
     children: [
       { type: 'span', text: 'Stop for a ' },
-      { type: 'span', attributes: { class: 'header-highlight' }, text: 'Byte' },
+      { type: 'span', attributes: { class: 'highlight-green' }, text: 'Byte' },
       { type: 'span', text: ', stay for a ' },
-      { type: 'span', attributes: { class: 'header-highlight' }, text: 'Bit' }
+      { type: 'span', attributes: { class: 'highlight-green' }, text: 'Bit' }
     ]
   };
   return sloganObj;
