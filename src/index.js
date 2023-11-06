@@ -1,9 +1,9 @@
 import './components/restaurant-components/styles/mynormalize.css';
 import './components/restaurant-components/styles/style.css';
-import { initPage } from './modules/renderInitial.js'
+import { initPage } from './modules/renderInitial.js';
 import { renderIndexPage } from './modules/renderIndex.js';
-import { renderMenuPage } from './modules/renderMenu.js'
-
+import { renderMenuPage } from './modules/renderMenu.js';
+import { renderContactPage } from './modules/renderContact';
 
 const contentController = (() => {
   initPage();
@@ -18,6 +18,7 @@ const contentController = (() => {
         contentContainer.append(renderMenuPage());
         break;
       case 'contact':
+        contentContainer.append(renderContactPage());
         break;
     }
   }

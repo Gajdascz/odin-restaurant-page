@@ -9,7 +9,7 @@ function initPage() {
   documentBody.prepend(buildHeader());
   documentBody.appendChild(buildFooter());
   const contentContainer = document.querySelector('div#dynamic-content-container');
-  //contentContainer.appendChild(renderIndexPage());
+  contentContainer.appendChild(renderIndexPage());
   document.querySelector('button[value="index"').setAttribute('id','current-page')
 
 }
